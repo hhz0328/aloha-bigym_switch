@@ -33,8 +33,9 @@ Add this line to `site-packages/mojo/elements/__init__.py` in your python direct
 
 
 ### 1.2 复现过程
+switch手柄：https://github.com/tocoteron/joycon-python
 ```
-pip install joycon-python hidapi pyglm   //switch手柄：https://github.com/tocoteron/joycon-python
+pip install joycon-python hidapi pyglm   
 ```
 
 ## 2.bigym
