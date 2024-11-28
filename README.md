@@ -50,11 +50,22 @@ pip install joycon-python hidapi pyglm
 改成`from .reduced_configuration import ReducedConfiguration
 `
 ```
-reduced_configuration.py 文件和 teleop_aloha.py 文件在同一目录下，你可以直接使用相对导入
-    ├── control/
-    │   ├── teleop_aloha.py
-    │   ├── reduced_configuration.py
-    │   └── loop_rate_limiters.py
+reduced_configuration.py 文件和 teleop_aloha.py 文件在同一目录下，可以直接使用相对导入
+├── control/
+    ├── teleop_aloha.py
+    ├── reduced_configuration.py
+    └── loop_rate_limiters.py
+```
+改成`from ..reduced_configuration import ReducedConfiguration`
+```
+在 prevs 目录下的脚本（例如 joycon_aloha.py）中，可以使用相对导入来导入 reduced_configuration.py 文件
+├── control/
+    ├── prevs/
+    │   ├── __init__.py
+    │   ├── joycon_aloha.py
+    │   └── other_files.py
+    ├── reduced_configuration.py
+    └── teleop_aloha.py
 ```
 
 ## 2.bigym
