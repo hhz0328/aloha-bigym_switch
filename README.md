@@ -40,9 +40,21 @@ Add this line to `site-packages/mojo/elements/__init__.py` in your python direct
 
 
 ### 1.2 复现过程
-switch手柄：https://github.com/tocoteron/joycon-python
+#### 1.2.1 switch手柄：https://github.com/tocoteron/joycon-python
 ```
 pip install joycon-python hidapi pyglm   
+```
+#### 1.2.2 本地文件没找到，导致无法import
+把`from reduced_configuration import ReducedConfiguration`
+
+改成`from .reduced_configuration import ReducedConfiguration
+`
+```
+reduced_configuration.py 文件和 teleop_aloha.py 文件在同一目录下，你可以直接使用相对导入
+    ├── control/
+    │   ├── teleop_aloha.py
+    │   ├── reduced_configuration.py
+    │   └── loop_rate_limiters.py
 ```
 
 ## 2.bigym
