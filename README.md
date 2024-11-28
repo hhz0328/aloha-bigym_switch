@@ -1,6 +1,13 @@
 # aloha-bigym_switch
 
 ## 1.aloha-bigym
+### 1.0 运行
+```
+cd /home/hhz/UCAS/2025/aloha-bigym
+
+conda activate aloha-bigym
+source .venv/bin/activate
+```
 
 ### 1.1 install
 ```
