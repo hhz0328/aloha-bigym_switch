@@ -1,8 +1,8 @@
 # aloha-bigym_switch
 
-## aloha-bigym
+## 1.aloha-bigym
 
-### install
+### 1.1 install
 ```
 git clone https://github.com/AlmondGod/aloha-bigym.git
 cd aloha-bigym
@@ -32,4 +32,16 @@ Add this line to `site-packages/mojo/elements/__init__.py` in your python direct
 
 
 
-### 
+### 1.2
+
+## 2.bigym
+
+### 2.1 install
+```
+git clone https://github.com/chernyadev/bigym.git
+cd bigym
+
+conda create --name bigym python=3.11
+conda activate bigym
+pip install .
+```
