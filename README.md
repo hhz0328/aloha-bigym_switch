@@ -67,6 +67,11 @@ reduced_configuration.py 文件和 teleop_aloha.py 文件在同一目录下，�
     ├── reduced_configuration.py
     └── teleop_aloha.py
 ```
+#### 1.2.3 少python包
+```
+pip install loop_rate_limiters
+pip install mink
+```
 
 ## 2.bigym
 
