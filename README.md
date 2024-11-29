@@ -72,6 +72,7 @@ reduced_configuration.py 文件和 teleop_aloha.py 文件在同一目录下，�
 pip install loop_rate_limiters
 pip install mink
 pip install pynput
+pip install h5py
 ```
 
 ## 2.bigym
