@@ -85,7 +85,8 @@ sudo apt-get install libhidapi-dev
 ```
 #### error2
 `hid.HIDException: unable to open device`
-https://bbs.archlinux.org/viewtopic.php?id=278341
+
+参考链接：https://bbs.archlinux.org/viewtopic.php?id=278341
 ```
 sudo mkdir -p /etc/udev/rules.d/
 
