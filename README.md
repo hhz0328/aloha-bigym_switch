@@ -45,6 +45,12 @@ Add this line to `site-packages/mojo/elements/__init__.py` in your python direct
 pip install joycon-python hidapi pyglm
 pip install hid
 ```
+`ImportError: Unable to load any of the following libraries:libhidapi-hidraw.so libhidapi-hidraw.so.0 libhidapi-libusb.so libhidapi-libusb.so.0 libhidapi-iohidmanager.so libhidapi-iohidmanager.so.0 libhidapi.dylib hidapi.dll libhidapi-0.dll`
+
+在 Ubuntu 系统中，您可以通过安装系统的 hidapi 库来解决这个问题。运行以下命令来安装相关依赖：
+```
+sudo apt-get install libhidapi-dev
+```
 #### 1.2.2 本地文件没找到，导致无法import
 把`from reduced_configuration import ReducedConfiguration`
 
