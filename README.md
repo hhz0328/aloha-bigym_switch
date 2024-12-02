@@ -42,7 +42,8 @@ Add this line to `site-packages/mojo/elements/__init__.py` in your python direct
 ### 1.2 复现过程
 #### 1.2.1 switch手柄：https://github.com/tocoteron/joycon-python
 ```
-pip install joycon-python hidapi pyglm   
+pip install joycon-python hidapi pyglm
+pip install hid
 ```
 #### 1.2.2 本地文件没找到，导致无法import
 把`from reduced_configuration import ReducedConfiguration`
