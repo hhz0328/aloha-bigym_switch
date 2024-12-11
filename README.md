@@ -1,6 +1,8 @@
 # aloha-bigym_switch
 **源代码连接**：https://github.com/AlmondGod/aloha-bigym/tree/master
 
+此readme，是复现过程的记录文档。共同进步！！！
+
 ## 1.aloha-bigym
 ### 1.0 运行
 ```
