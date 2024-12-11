@@ -7,6 +7,8 @@ cd /home/hhz/UCAS/2025/aloha-bigym
 
 conda activate aloha-bigym
 source .venv/bin/activate
+//连接joycon
+sudo /home/hhz/UCAS/2025/aloha-bigym/.venv/bin/python teleop_aloha.py
 ```
 
 ### 1.1 install
@@ -95,6 +97,35 @@ echo 'KERNEL=="hidraw*", SUBSYSTEM=="hidraw", MODE="0666", TAG+="uaccess", TAG+=
 sudo udevadm control --reload-rules
 
 sudo udevadm trigger
+```
+#### error3
+更改
+`/home/hhz/UCAS/2025/aloha-bigym/control/reduced_configuration.py`路径
+```
+//第7行
+class ReducedConfiguration(Configuration):
+    def __init__(self, model, data, relevant_qpos_indices, relevant_qvel_indices):
+        self.relevant_qpos_indices = relevant_qpos_indices
+        self.relevant_qvel_indices = relevant_qvel_indices
+        //赋值操作，放到init前
+        super().__init__(model, data)
+```
+#### error4
+更改
+`/home/hhz/UCAS/2025/aloha-bigym/.venv/lib/python3.12/site-packages/mink/tasks/task.py`路径
+```
+//131行，把.model删去
+ eye_tg = np.eye(configuration.nv)
+```
+#### error5
+更改`/home/hhz/UCAS/2025/aloha-bigym/.venv/lib/python3.12/site-packages/mink/solve_ik.py`路径
+```
+//第16,17行，把.model删去
+def _compute_qp_objective(
+    configuration: Configuration, tasks: Sequence[Task], damping: float
+) -> Objective:
+    H = np.eye(configuration.nv) * damping
+    c = np.zeros(configuration.nv)
 ```
 
 ## 2.bigym
