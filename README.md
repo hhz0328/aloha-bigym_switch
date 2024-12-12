@@ -91,7 +91,8 @@ sudo apt-get install libhidapi-dev
 #### error2
 `hid.HIDException: unable to open device`
 
-参考链接：https://bbs.archlinux.org/viewtopic.php?id=278341
+参考链接：
+
 ```
 sudo mkdir -p /etc/udev/rules.d/
 
@@ -103,7 +104,7 @@ sudo udevadm trigger
 ```
 #### error3
 更改
-`/home/hhz/UCAS/2025/aloha-bigym/control/reduced_configuration.py`路径
+
 ```
 //第7行
 class ReducedConfiguration(Configuration):
@@ -114,14 +115,13 @@ class ReducedConfiguration(Configuration):
         super().__init__(model, data)
 ```
 #### error4
-更改
-`/home/hhz/UCAS/2025/aloha-bigym/.venv/lib/python3.12/site-packages/mink/tasks/task.py`路径
+
 ```
 //131行，把.model删去
  eye_tg = np.eye(configuration.nv)
 ```
 #### error5
-更改`/home/hhz/UCAS/2025/aloha-bigym/.venv/lib/python3.12/site-packages/mink/solve_ik.py`路径
+
 ```
 //第16,17行，把.model删去
 def _compute_qp_objective(
