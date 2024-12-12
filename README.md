@@ -116,13 +116,13 @@ class ReducedConfiguration(Configuration):
 #### error4
 
 ```
-//131行，把.model删去
+//把.model删去
  eye_tg = np.eye(configuration.nv)
 ```
 #### error5
 
 ```
-//第16,17行，把.model删去
+//把.model删去
 def _compute_qp_objective(
     configuration: Configuration, tasks: Sequence[Task], damping: float
 ) -> Objective:
