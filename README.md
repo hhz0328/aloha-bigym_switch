@@ -11,7 +11,7 @@ cd /home/hhz/UCAS/2025/aloha-bigym
 conda activate aloha-bigym
 source .venv/bin/activate
 //连接joycon
-sudo /home/hhz/UCAS/2025/aloha-bigym/.venv/bin/python teleop_aloha.py
+sudo python teleop_aloha.py
 ```
 
 ### 1.1 install
@@ -103,7 +103,6 @@ sudo udevadm control --reload-rules
 sudo udevadm trigger
 ```
 #### error3
-更改
 
 ```
 //第7行
